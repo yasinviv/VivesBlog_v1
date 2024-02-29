@@ -1,0 +1,19 @@
+﻿@model IList<Article>
+
+<h1>Articles table</h1>
+
+<table class="table table-info table-striped">
+    <thead>
+    <tr>
+        <th>Date</th>
+        <th>Author</th>
+        <th>Title</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var article in Model)
+    {
+        <partial name="ArticleRowPartial" model="article"/>
+    }
+    </tbody>
+</table>
